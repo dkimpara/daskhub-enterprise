@@ -3,15 +3,16 @@ redis:
     enabled: false
 daskhub:
   jupyterhub:
-    #proxy:
+    # couldn't get tls to work :/
+    # proxy: 
     #  service:
     #    type: LoadBalancer
     #  https:
     #    enabled: true
     #    hosts:
-    #      - "35.224.174.20.nip.io"
-      #  letsencrypt:
-     #     contactEmail: "dhamma.kimpara@colorado.edu"
+    #      - https://http://ip.nip.io
+    #    letsencrypt:
+    #      contactEmail: "dhamma.kimpara@colorado.edu"
     hub:
       extraEnv:
         JUPYTER_GATEWAY_URL: 'enterprise-gateway'
