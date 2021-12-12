@@ -17,6 +17,9 @@ daskhub:
       extraEnv:
         JUPYTER_GATEWAY_URL: 'enterprise-gateway'
     singleuser:
+      memory:
+          limit: 4G
+          guarantee: 2G
       defaultUrl: "/lab" 
       extraEnv:
         DASK_GATEWAY__CLUSTER__OPTIONS__IMAGE: '{JUPYTER_IMAGE_SPEC}'
