@@ -13,6 +13,9 @@ dependencies:
   - name: enterprise-gateway
     version: "2.5.0"
     repository: 'https://charts.spot.io'
+  - name: redis
+    version: "15.6.4"
+    repository: https://charts.bitnami.com/bitnami
 maintainers:
   - name: Dhamma Kimpara
     email: dhamma.kimpara@colorado.edu

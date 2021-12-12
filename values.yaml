@@ -1,3 +1,6 @@
+redis:
+  auth:
+    enabled: false
 daskhub:
   jupyterhub:
     #proxy:
@@ -13,12 +16,11 @@ daskhub:
       extraEnv:
         JUPYTER_GATEWAY_URL: 'enterprise-gateway'
     singleuser:
-      #image:
-       # name: pangeo/base-notebook  # Image to use for singleuser environment. Must include dask-gateway.
-        #tag: 2021.06.05
       defaultUrl: "/lab" 
       extraEnv:
         DASK_GATEWAY__CLUSTER__OPTIONS__IMAGE: '{JUPYTER_IMAGE_SPEC}'
+        GET_HOSTS_FROM: 'dns'
+        REDIS_HOST: 'app-redis-master'
   dask-gateway:
     gateway:
       extraConfig:
